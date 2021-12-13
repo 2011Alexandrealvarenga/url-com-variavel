@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+<script>
+window.onload = function() {
+      try {
+        var url_string = (window.location.href).toLowerCase();
+        var url = new URL(url_string);
+        var source = url.searchParams.get("utm_source");
+        var medium = url.searchParams.get("utm_medium");
+
+        console.log(source +" "+ medium);
+      } catch (err) {
+        console.log("Issues with Parsing URL Parameter's - " + err);
+      }
+}
+
+</script>
+<p> teste</p><br>
+
+Link to <a href="https://www.google.com/" onclick="location.href=this.href+'?xyz='+val">Google</a><br>
+<a href=""></a>
+</body>
+</html>
